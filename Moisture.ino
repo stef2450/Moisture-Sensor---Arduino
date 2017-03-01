@@ -2,6 +2,7 @@ int sensorPin = A0;
 int sensorValue = 0;
 int maxthreshold = 730;
 int minthreshold = 600;
+int ms = 50; // 1 morsecode unit
 
 void setup() {
 
@@ -20,9 +21,41 @@ void loop() {
     delay(25);
   } else if(sensorValue <minthreshold){
     digitalWrite(LED_BUILTIN, HIGH);
-    delay(500);
+    delay(ms);
     digitalWrite(LED_BUILTIN, LOW);
-    delay(500);
+    delay(ms);
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(ms);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(ms);
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(ms);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(3*ms);
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(3*ms);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(ms);
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(3*ms);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(ms);
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(3*ms);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(3*ms);
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(ms);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(ms);
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(ms);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(ms);
+    digitalWrite(LED_BUILTIN, HIGH);
+    delay(ms);
+    digitalWrite(LED_BUILTIN, LOW);
+    delay(20*ms);
   } else {
     digitalWrite(LED_BUILTIN, LOW);    
   }
